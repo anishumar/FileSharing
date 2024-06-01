@@ -1,6 +1,6 @@
 # FileSharing
 
-Overview
+## Overview
 This file sharing application allows users to easily share files from their desktop over a local network using an HTTP server. The application sets up a simple HTTP server on a specified port and generates a QR code containing the server's URL, which can be scanned to access the shared files.
 
 Features
@@ -10,10 +10,10 @@ Cross-platform support (works on Windows, macOS, and Linux).
 changes should be made for respective platform e.g. in macOS Replace os.environ['USERPROFILE'] with os.path.expanduser('~') to get the user's home directory.
 Added s.close() after getting the IP address to close the socket properly.
 
-# changing the directory to access the files desktop with the help of os module
+changing the directory to access the files desktop with the help of os module
 desktop = os.path.join(os.path.expanduser('~'), 'Desktop')
 os.chdir(desktop)
-# finding the IP address of the PC
+finding the IP address of the PC
 s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 s.connect(("8.8.8.8", 80))
 IP = "http://" + s.getsockname()[0] + ":" + str(PORT)
