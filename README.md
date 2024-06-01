@@ -7,6 +7,8 @@ Features
 Simple HTTP server for sharing files from the desktop.
 Automatic generation of a QR code for easy access to the server URL.
 Cross-platform support (works on Windows, macOS, and Linux).
+changes should be made for respective platform e.g. in macOS Replace os.environ['USERPROFILE'] with os.path.expanduser('~') to get the user's home directory.
+Added s.close() after getting the IP address to close the socket properly.
 
 Requirements
 Python 3.x
